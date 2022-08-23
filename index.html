@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Map Animation</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet"/>
+    
+    <style>
+        body { margin: 0; padding: 0; }
+        #map {position: absolute; top: 0; bottom: 0; width: 100; }
+        .map-overlay{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./manipulation.js"></script>
+    <div id="map"></div>
+    <div class="map-overlay top">
+        <button style="font-size: 2em" onclick="move()">
+            In transit locations
+        </button>
+    </div>
+
+<script>
+
+    mapboxgl.accessToken ='pk.eyJ1IjoibWh0cmVhZCIsImEiOiJjbDc2NGIwY2YwOW9xNDJvN2I0bXd0ZDJqIn0.CKyWGu_6bFT6op67cPrl5g';
+    
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.07678, 42.3364],
+        zoom: 12
+    })
+
+    var marker = new mapboxgl.Marker()
+    .setLngLat([-71.078778729, 42.337969])
+    .addTo(map);
+
+
+</script>
+</body>
+</html>
