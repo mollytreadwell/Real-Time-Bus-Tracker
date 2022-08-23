@@ -2,15 +2,15 @@
 
 ## Application Programming Interface
 
-This project shows the walking route one might use when visiting Brooklyn NY. The route begins at the Botanical Gardens and moves to the Barclay Center, then a local restaurant and finally a hotel. 
+This project shows the active bus routes in downtown Boston. 
 
-## How To Generate Directions
+## Real Time Routes
 
-On clicking the button "Brooklyn Afternoon", the user can generate walking directions from the Brooklyn Botanical Gardens to the Barclay Center, the Mediterranean restaurant "OLEA" and The Holiday Inn in Downtown Brooklyn.
+Using data collected from the Massachusetts Bay Transportation Authority website, I have marked the locations of the buses that are in service weekday mornings. I gathered the GPS coordinates by searching through the JSON file within the browser devtools. The coordinates were put into a JavaScript array and filtered through with the function <i>move()</i>. 
 
 ### What Comes Next?
 
-Further additions to project could include adding various forms of transportation, like the T or taxi, and one could add other locations which might entail incorporating multiple means of transportation within teh same route (for example, you walk from the Botanical Gardens to the Barclay Center, then take a cab to the harbor, the T to a restaurant and walk from there back to the hotel).
+Although this map displays active bus routes, I could show other data such as weekend routes, certain bus lines (orange, red, green...), subway routes, routes that move through certain areas (for example, if I wanted to know all of the busses that go through South Station), or even routes that lead to the harbor and ferry services. 
 
 ### MIT License
 
